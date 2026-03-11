@@ -614,7 +614,29 @@
         </div>
 
         <button class="cta-green" onclick="checkout()">EU QUERO MARIA COMIGO!</button>
-        <div class="price-info">De R$597 por apenas R$37,00 ou 8x de R$5,33</div>
+        <style>
+    .price-line {
+        font-family: Arial, sans-serif;
+        font-size: 18px; /* Ajuste o tamanho conforme preferir */
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .old-price-red {
+        color: #e60000; /* Vermelho da imagem */
+        text-decoration: line-through; /* O risco no meio */
+    }
+
+    .new-price-green {
+        color: #1a472a; /* Verde escuro da imagem */
+        font-weight: normal;
+    }
+</style>
+
+<div class="price-line">
+    <span class="old-price-red">De R$97</span> 
+    <span class="new-price-green">por apenas R$37,00 ou 8x de R$5,38</span>
+</div>
 
         <!-- Selo de Garantia 90 Dias no Final -->
         <div class="img-container" style="margin-top: 30px; width: 150px; margin-left: auto; margin-right: auto;">
