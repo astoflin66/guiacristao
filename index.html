@@ -516,8 +516,76 @@
             <img src="https://i.imgur.com/eMfSqQS.png" alt="O que encontrará">
         </div>
         
-        <button class="cta-green" onclick="checkout()">EU QUERO MARIA COMIGO!</button>
-        <div class="price-info">De R$597 por apenas R$37,00 ou 8x de R$5,33</div>
+       <style>
+    .container-oferta {
+        text-align: center;
+        font-family: 'Arial Black', sans-serif; /* Fonte mais forte igual à imagem */
+        margin: 20px 0;
+    }
+
+    .cta-green {
+        background-color: #28a745;
+        color: white;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+        transition: transform 0.2s;
+    }
+
+    .cta-green:hover {
+        transform: scale(1.05);
+    }
+
+    .price-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        line-height: 1.1;
+    }
+
+    .old-price {
+        color: #FF0000; /* Vermelho vibrante */
+        text-decoration: line-through; /* O risco no meio */
+        font-size: 1.8rem;
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+
+    .promo-text {
+        color: #000;
+        font-size: 1.1rem;
+        font-weight: bold;
+        margin: 5px 0;
+    }
+
+    .current-price {
+        color: #00B359; /* Verde da imagem */
+        font-size: 3.5rem; /* Bem grande para destaque */
+        font-weight: 900;
+        margin-bottom: 5px;
+    }
+
+    .installments {
+        color: #333;
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+</style>
+
+<div class="container-oferta">
+    <button class="cta-green" onclick="checkout()">EU QUERO MARIA COMIGO!</button>
+    
+    <div class="price-info">
+        <span class="old-price">DE R$97,00</span>
+        <span class="promo-text">POR APENAS</span>
+        <span class="current-price">R$37,00</span>
+        <div class="installments">ou 8x de R$5,33</div>
+    </div>
+</div>
 
         <div class="img-container" style="margin-top: 30px;">
             <img src="https://i.imgur.com/l4TGDRE.png" alt="Conexão Espiritual">
