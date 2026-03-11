@@ -5,6 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>365 dias com Maria</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <script
+      src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+      data-utmify-prevent-xcod-sck
+      data-utmify-prevent-subids
+      async
+      defer
+    ></script>
+
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1587595282504005');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1587595282504005&ev=PageView&noscript=1"/></noscript>
     <style>
         :root {
             --primary-color: #2563EB;
@@ -91,7 +113,6 @@
             to { opacity: 1; }
         }
 
-        /* Estilos Página 1 */
         .step-1-title {
             color: #0088CC;
             font-weight: 700;
@@ -207,11 +228,12 @@
             margin: 15px 0;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             border-radius: 10px;
+            transition: transform 0.2s;
         }
 
         button.cta-green:hover {
             background: #16A34A;
-            transform: translateY(-1px);
+            transform: scale(1.05);
         }
 
         input[type="text"] {
@@ -225,7 +247,6 @@
             background: #F9FAFB;
         }
 
-        /* Audio Player com Padre */
         .audio-player-container {
             width: 100%;
             background: #F8FAFC;
@@ -262,7 +283,6 @@
             height: 40px;
         }
 
-        /* Barra de Carregamento Aprimorada */
         .loading-container {
             width: 100%;
             display: flex;
@@ -293,7 +313,6 @@
             font-weight: 600;
         }
 
-        /* Carrossel de Depoimentos */
         .testimonial-carousel {
             width: 100%;
             position: relative;
@@ -338,17 +357,9 @@
         .carousel-btn.prev { left: 10px; }
         .carousel-btn.next { right: 10px; }
 
-        /* Estilos Checkout */
         .checkout-page {
             text-align: center;
             width: 100%;
-        }
-
-        .price-info {
-            font-size: 0.85rem;
-            color: var(--red);
-            margin-top: 5px;
-            font-weight: 600;
         }
 
         .section-title {
@@ -372,38 +383,91 @@
             margin: 15px 0;
             color: #1F2937;
         }
-        
-       
+
+        /* Estilos de Oferta Unificados */
+        .container-oferta {
+            text-align: center;
+            font-family: 'Arial Black', sans-serif;
+            margin: 20px 0;
+        }
+
+        .price-info-block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            line-height: 1.1;
+        }
+
+        .old-price-block {
+            color: #FF0000;
+            text-decoration: line-through;
+            font-size: 1.8rem;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+
+        .promo-text-block {
+            color: #000;
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin: 5px 0;
+        }
+
+        .current-price-block {
+            color: #00B359;
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 5px;
+        }
+
+        .installments-block {
+            color: #333;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        .price-line {
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .old-price-red {
+            color: #e60000;
+            text-decoration: line-through;
+        }
+
+        .new-price-green {
+            color: #1a472a;
+            font-weight: normal;
+        }
+
+        .bloco-garantia {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 0 20px;
+            color: #1a1a24;
+        }
+
+        .titulo-garantia {
+            font-size: 1.6rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .texto-garantia {
+            font-size: 1.1rem;
+            line-height: 1.5;
+            color: #33333b;
+        }
     </style>
-     <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1587595282504005');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1587595282504005&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-        <script
-  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
-  data-utmify-prevent-xcod-sck
-  data-utmify-prevent-subids
-  async
-  defer
-></script>
 </head>
 <body>
 
 <div id="quiz-container">
-    <!-- Logo Topo -->
     <div class="header-logo" id="main-logo" style="display:none;">
         <img src="https://cdn.xquiz.co/images/d3d0db68-30d9-4a8a-a0de-56a4f23cb2bb" alt="Logo">
     </div>
@@ -412,7 +476,6 @@ src="https://www.facebook.com/tr?id=1587595282504005&ev=PageView&noscript=1"
         <div class="progress-bar" id="progress-bar"></div>
     </div>
 
-    <!-- Step 1: Intro -->
     <div class="step active" id="step-1">
         <div class="step-1-title">ISSO NÃO É POR ACASO...</div>
         <div class="step-1-subtitle">Se você chegou até aqui, é porque <strong>ELA TE CHAMOU ❤️ 🙏</strong></div>
@@ -426,7 +489,6 @@ src="https://www.facebook.com/tr?id=1587595282504005&ev=PageView&noscript=1"
         </div>
     </div>
 
-    <!-- Step 2: Nome -->
     <div class="step" id="step-2">
         <h1>Gostaria de deixar seu nome para que o incluamos em nosso Livro de Orações?</h1>
         <p>Com grande alegria, levaremos seu nome ao altar em nossas preces diárias. Ao registrá-lo aqui, unimos sua intenção à nossa comunidade de fé, confiando tudo ao Coração Misericordioso de Jesus e à intercessão de Nossa Senhora. 🙏🌹</p>
@@ -434,14 +496,12 @@ src="https://www.facebook.com/tr?id=1587595282504005&ev=PageView&noscript=1"
         <button class="primary" onclick="saveName()">Enviar</button>
     </div>
 
-    <!-- Step 3: Boas-vindas -->
     <div class="step" id="step-3">
         <h1 id="welcome-title">Carregando...</h1>
         <p>🙏 Seu nome já foi cuidadosamente incluído em nosso Livro de Orações. Ele será lembrado com carinho e fé em cada dia, diante do altar do Senhor. ✨</p>
         <button class="primary" onclick="nextStep(4)">CONTINUAR</button>
     </div>
 
-    <!-- Step 4: Pergunta 1 -->
     <div class="step" id="step-4">
         <h1>Em quais áreas você deseja colocar seu coração neste Devocional?</h1>
         <div class="options-container">
@@ -453,332 +513,7 @@ src="https://www.facebook.com/tr?id=1587595282504005&ev=PageView&noscript=1"
         </div>
     </div>
 
-    <!-- Step 5: Pergunta 2 -->
     <div class="step" id="step-5">
         <h1>Como está o seu coração espiritual neste momento?</h1>
         <div class="options-container">
-            <button onclick="nextStep(6)">❤️‍🔥 Sinto que preciso de uma purificação interior</button>
-            <button onclick="nextStep(6)">🌿 Busco uma renovação espiritual</button>
-            <button onclick="nextStep(6)">🕊️ Estou em paz, mas desejo mais clareza e direção</button>
-            <button onclick="nextStep(6)">🛡️ Sinto necessidade de proteção e paz espiritual</button>
-            <button onclick="nextStep(6)">🙏 Quero fortalecer minha fé e minha comunhão com Deus</button>
-        </div>
-    </div>
-
-    <!-- Step 6: Pergunta 3 -->
-    <div class="step" id="step-6">
-        <h1>Você sente que há algo em sua vida que, apesar de seus esforços, ainda não se resolve?</h1>
-        <div class="options-container">
-            <button onclick="nextStep(7)">😟 Sim… Sinto que tudo está travado, e nada parece dar certo.</button>
-            <button onclick="nextStep(7)">😔 Sim… Algumas áreas da minha vida parecem estagnadas.</button>
-            <button onclick="nextStep(7)">🥰 Graças a Deus, sinto que tudo está fluindo bem no momento.</button>
-        </div>
-    </div>
-
-    <!-- Step 7: Oração -->
-    <div class="step" id="step-7">
-        <h1>Vamos rezar juntos com fé e confiança.</h1>
-        <p>Clique no botão abaixo para ouvir esta oração e colocar suas intenções sob a proteção do Coração Imaculado de Maria. 🙏🌹❤️</p>
-        <div class="audio-player-container">
-            <div class="padre-avatar">
-                <img src="https://i.imgur.com/M0duEAx.png" alt="Padre">
-            </div>
-            <div class="audio-player-wrapper">
-                <audio controls>
-                    <source src="https://cdn.xquiz.co/audios/67c214d0-df86-4adf-b227-7c5624ccb85c" type="audio/mpeg">
-                </audio>
-            </div>
-        </div>
-        <button class="primary" onclick="nextStep(8)">Continuar</button>
-    </div>
-
-    <!-- Step 8: Prece -->
-    <div class="step" id="step-8">
-        <h1>Deus quer te abençoar hoje! ✨🙏</h1>
-        <p>Declare com fé seu pedido abaixo. Nossa Senhora levará sua súplica até o coração de Jesus.</p>
-        <input type="text" id="user-prece" placeholder="Digite aqui sua prece...">
-        <button class="primary" onclick="savePrece()">CONTINUAR</button>
-    </div>
-
-    <!-- Step 9: Pergunta 4 -->
-    <div class="step" id="step-9">
-        <h1>Se você pudesse viver os ensinamentos de Jesus de forma prática no seu dia a dia com a intercessão de Nossa Senhora, isso seria valioso para você?</h1>
-        <div class="options-container">
-            <button onclick="nextStep(10)">🙏 Sim, seria muito valioso para minha vida!</button>
-            <button onclick="nextStep(10)">🙌 Sim, acredito que seria útil sim.</button>
-            <button onclick="nextStep(10)">🤔 Talvez… depende de como isso se aplicaria.</button>
-        </div>
-    </div>
-
-    <!-- Step 10: Final Loading -->
-    <div class="step" id="step-10">
-        <div class="img-container">
-            <img src="https://i.imgur.com/zsL15W8.png" alt="Livro">
-        </div>
-        <h1>Gerando seu Devocional 🙏❤️</h1>
-        <div class="loading-container" id="loading-section">
-            <div class="loader"></div>
-            <div class="loading-text">Carregando...</div>
-        </div>
-        <p id="final-text" style="display:none; font-size: 1rem; margin-top: 20px;"></p>
-        <button class="primary" id="final-cta" style="display:none;" onclick="nextStep(11)">ACESSAR MEU DEVOCIONAL</button>
-    </div>
-
-    <!-- Step 11: Checkout Final -->
-    <div class="step checkout-page" id="step-11">
-        <div class="sub-header-text">Seu Devocional com Maria está pronto! Veja abaixo 🙏</div>
-        
-        <div class="img-container">
-            <img src="https://i.imgur.com/9hInX0B.png" alt="Banner Principal">
-        </div>
-        
-        <div class="incluso-text">O que está incluso em seu pacote devocional?</div>
-
-        <div class="img-container">
-            <img src="https://i.imgur.com/QIo5VUG.png" alt="Benefícios">
-        </div>
-
-        <div class="img-container">
-            <img src="https://i.imgur.com/eMfSqQS.png" alt="O que encontrará">
-        </div>
-        
-       <style>
-    .container-oferta {
-        text-align: center;
-        font-family: 'Arial Black', sans-serif; /* Fonte mais forte igual à imagem */
-        margin: 20px 0;
-    }
-
-    .cta-green {
-        background-color: #28a745;
-        color: white;
-        padding: 15px 30px;
-        border: none;
-        border-radius: 5px;
-        font-weight: bold;
-        cursor: pointer;
-        font-size: 1.2rem;
-        margin-bottom: 20px;
-        transition: transform 0.2s;
-    }
-
-    .cta-green:hover {
-        transform: scale(1.05);
-    }
-
-    .price-info {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        line-height: 1.1;
-    }
-
-    .old-price {
-        color: #FF0000; /* Vermelho vibrante */
-        text-decoration: line-through; /* O risco no meio */
-        font-size: 1.8rem;
-        font-weight: 900;
-        text-transform: uppercase;
-    }
-
-    .promo-text {
-        color: #000;
-        font-size: 1.1rem;
-        font-weight: bold;
-        margin: 5px 0;
-    }
-
-    .current-price {
-        color: #00B359; /* Verde da imagem */
-        font-size: 3.5rem; /* Bem grande para destaque */
-        font-weight: 900;
-        margin-bottom: 5px;
-    }
-
-    .installments {
-        color: #333;
-        font-size: 1.1rem;
-        font-weight: bold;
-    }
-</style>
-
-<div class="container-oferta">
-    <button class="cta-green" onclick="checkout()">EU QUERO MARIA COMIGO!</button>
-    
-    <div class="price-info">
-        <span class="old-price">DE R$97,00</span>
-        <span class="promo-text">POR APENAS</span>
-        <span class="current-price">R$37,00</span>
-        <div class="installments">ou 8x de R$5,33</div>
-    </div>
-</div>
-
-        <div class="img-container" style="margin-top: 30px;">
-            <img src="https://i.imgur.com/l4TGDRE.png" alt="Conexão Espiritual">
-        </div>
-
-         <div class="img-container" style="margin-top: 30px;">
-            <img src="https://i.imgur.com/Od9hCvb.png" alt="Conexão Espiritual">
-        </div>
-
-        <div class="container-oferta">
-    <button class="cta-green" onclick="checkout()">EU QUERO MARIA COMIGO!</button>
-
-            <div class="price-line">
-    <span class="old-price-red">De R$97</span> 
-    <span class="new-price-green">por apenas R$37,00 ou 8x de R$5,38</span>
-</div><br>
-            
-        <!-- Imagem de Nossa Senhora antes de Devoção e Confiança -->
-        <div class="img-container">
-            <img src="https://i.imgur.com/QB2LqDx.png" alt="Nossa Senhora">
-        </div>
-
-        <div class="section-title">Nossa Devoção é a confiança!</div>
-        <p style="font-size: 0.85rem; margin-bottom: 15px;">Vejam o que dizem as pessoas que já adquiriram:</p>
-
-        <!-- Carrossel de Depoimentos -->
-        <div class="testimonial-carousel">
-            <button class="carousel-btn prev" onclick="moveCarousel(-1)">&#10094;</button>
-            <div class="carousel-inner" id="carousel-inner">
-                <div class="carousel-item"><img src="https://cdn.xquiz.co/images/2bc7a6a3-4c7b-47b2-aebb-dd84f9705c30" alt="Depoimento 1"></div>
-                <div class="carousel-item"><img src="https://cdn.xquiz.co/images/7454eb68-53a7-4f45-bfea-3716a110c0a4" alt="Depoimento 2"></div>
-                <div class="carousel-item"><img src="https://cdn.xquiz.co/images/f3df381b-98e1-40ca-8344-717a01edcb6c" alt="Depoimento 3"></div>
-                <div class="carousel-item"><img src="https://cdn.xquiz.co/images/84c21624-a48d-4711-9020-00af378294de" alt="Depoimento 4"></div>
-                <div class="carousel-item"><img src="https://cdn.xquiz.co/images/1684146a-541f-4f5a-b834-2bec6f95ee3c" alt="Depoimento 5"></div>
-                <div class="carousel-item"><img src="https://cdn.xquiz.co/images/de356f25-754d-47fb-805b-253c6fdacd70" alt="Depoimento 6"></div>
-            </div>
-            <button class="carousel-btn next" onclick="moveCarousel(1)">&#10095;</button>
-        </div>
-
-        <button class="cta-green" onclick="checkout()">EU QUERO MARIA COMIGO!</button>
-        <style>
-    .price-line {
-        font-family: Arial, sans-serif;
-        font-size: 18px; /* Ajuste o tamanho conforme preferir */
-        text-align: center;
-        margin-top: 10px;
-    }
-
-    .old-price-red {
-        color: #e60000; /* Vermelho da imagem */
-        text-decoration: line-through; /* O risco no meio */
-    }
-
-    .new-price-green {
-        color: #1a472a; /* Verde escuro da imagem */
-        font-weight: normal;
-    }
-</style>
-<br>
-<div class="price-line">
-    <span class="old-price-red">De R$97</span> 
-    <span class="new-price-green">por apenas R$37,00 ou 8x de R$5,38</span>
-</div><br>
-            <style>
-    .bloco-garantia {
-        text-align: center; /* Centraliza tudo */
-        font-family: Arial, sans-serif; /* Deixa a fonte limpa e moderna */
-        max-width: 600px; /* Impede que o texto fique comprido demais no computador */
-        margin: 40px auto; /* Dá um espaço em cima/embaixo e centraliza o bloco na tela */
-        padding: 0 20px; /* Evita que o texto encoste nas bordas no celular */
-        color: #1a1a24; /* Uma cor bem escura, quase preta, igual da imagem */
-    }
-
-    .titulo-garantia {
-        font-size: 1.6rem;
-        font-weight: 800; /* Bem negrito */
-        margin-bottom: 15px; /* Espaço entre o título e o texto */
-    }
-
-    .texto-garantia {
-        font-size: 1.1rem;
-        line-height: 1.5; /* Espaçamento entre as linhas para facilitar a leitura */
-        color: #33333b; /* Um tom sutilmente mais claro que o título */
-    }
-</style>
-
-<div class="bloco-garantia">
-    <h2 class="titulo-garantia">Tem Garantia?</h2>
-    <p class="texto-garantia">
-        SIM! Estamos tão confiantes que o nosso Devocional te ajudará que garantimos um reembolso total no prazo de 90 dias após a compra.
-    </p>
-</div>
-
-        <!-- Selo de Garantia 90 Dias no Final -->
-        <div class="img-container" style="margin-top: 30px; width: 150px; margin-left: auto; margin-right: auto;">
-            <img src="https://i.imgur.com/Kp4erWF.png" alt="Garantia 90 Dias">
-        </div>
-        <p style="font-size: 0.8rem; color: #666; margin-bottom: 30px; font-weight: 700;"></p>
-    </div>
-</div>
-
-<script>
-    let currentStep = 1;
-    const totalSteps = 11;
-    let userName = "";
-    let userPrece = "";
-    let carouselIndex = 0;
-
-    function updateProgress() {
-        const progress = ((currentStep - 1) / (totalSteps - 1)) * 100;
-        document.getElementById('progress-bar').style.width = progress + '%';
-        if (currentStep === 1 || currentStep === 11) {
-            document.getElementById('main-logo').style.display = 'none';
-            document.getElementById('progress-container').style.display = 'none';
-        } else {
-            document.getElementById('main-logo').style.display = 'flex';
-            document.getElementById('progress-container').style.display = 'block';
-        }
-    }
-
-    function nextStep(step) {
-        document.querySelector('.step.active').classList.remove('active');
-        document.getElementById('step-' + step).classList.add('active');
-        currentStep = step;
-        updateProgress();
-        window.scrollTo(0, 0);
-        if (step === 10) startFinalLoading();
-    }
-
-    function saveName() {
-        const nameInput = document.getElementById('user-name').value;
-        if (!nameInput.trim()) return alert("Por favor, digite seu nome.");
-        userName = nameInput;
-        document.getElementById('welcome-title').innerText = userName + " é uma bênção contar com sua presença!";
-        nextStep(3);
-    }
-
-    function savePrece() {
-        const preceInput = document.getElementById('user-prece').value;
-        if (!preceInput.trim()) return alert("Por favor, digite sua prece.");
-        userPrece = preceInput;
-        nextStep(9);
-    }
-
-    function startFinalLoading() {
-        setTimeout(() => {
-            document.getElementById('loading-section').style.display = 'none';
-            const finalText = document.getElementById('final-text');
-            finalText.style.display = 'block';
-            finalText.innerHTML = 'Neste Devocional os caminhos se abrirão e o meu desejo de <strong>' + userPrece + '</strong> será realizado em nome de Jesus pela intercessão de Nossa Senhora.';
-            document.getElementById('final-cta').style.display = 'block';
-        }, 3000);
-    }
-
-    function moveCarousel(dir) {
-        const inner = document.getElementById('carousel-inner');
-        const items = document.querySelectorAll('.carousel-item');
-        carouselIndex = (carouselIndex + dir + items.length) % items.length;
-        inner.style.transform = 'translateX(-' + (carouselIndex * 100) + '%)';
-    }
-
-    function checkout() {
-        window.location.href = "https://pay.cakto.com.br/35ri6ej_801779"; 
-    }
-
-    updateProgress();
-</script>
-
-</body>
-</html>
+            <button onclick="nextStep(6)">❤️‍
