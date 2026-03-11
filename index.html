@@ -6,13 +6,7 @@
     <title>365 dias com Maria</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     
-    <script
-      src="https://cdn.utmify.com.br/scripts/utms/latest.js"
-      data-utmify-prevent-xcod-sck
-      data-utmify-prevent-subids
-      async
-      defer
-    ></script>
+    <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck data-utmify-prevent-subids async defer></script>
 
     <script>
     !function(f,b,e,v,n,t,s)
@@ -27,493 +21,112 @@
     fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1587595282504005&ev=PageView&noscript=1"/></noscript>
+
     <style>
-        :root {
-            --primary-color: #2563EB;
-            --bg-color: #FFFFFF;
-            --text-color: #020617;
-            --white: #FFFFFF;
-            --gray: #4B5563;
-            --light-blue: #0088CC;
-            --green: #22C55E;
-            --red: #EF4444;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            min-height: 100vh;
-            overflow-x: hidden;
-        }
-
-        #quiz-container {
-            width: 100%;
-            max-width: 500px;
-            background: var(--white);
-            min-height: 100vh;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            padding: 20px;
-        }
-
-        .header-logo {
-            display: flex;
-            justify-content: center;
-            padding: 10px 0;
-            margin-bottom: 10px;
-        }
-
-        .header-logo img {
-            width: 40px;
-            height: auto;
-        }
-
-        .progress-bar-container {
-            width: 100%;
-            height: 8px;
-            background: #F1F5F9;
-            border-radius: 4px;
-            margin-bottom: 30px;
-            overflow: hidden;
-        }
-
-        .progress-bar {
-            height: 100%;
-            background: var(--primary-color);
-            width: 0%;
-            transition: width 0.5s ease;
-        }
-
-        .step {
-            display: none;
-            animation: fadeIn 0.3s ease;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            flex-grow: 1;
-        }
-
-        .step.active {
-            display: flex;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        .step-1-title {
-            color: #0088CC;
-            font-weight: 700;
-            font-size: 1.2rem;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-        }
-
-        .step-1-subtitle {
-            font-size: 0.95rem;
-            margin-bottom: 25px;
-            font-weight: 400;
-        }
-
-        .step-1-call {
-            color: #0088CC;
-            font-weight: 700;
-            font-size: 1.1rem;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-        }
-
-        .step-1-footer {
-            font-size: 0.9rem;
-            margin-top: 20px;
-            line-height: 1.5;
-            color: #1F2937;
-        }
-
-        h1 {
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-bottom: 15px;
-            line-height: 1.4;
-        }
-
-        p {
-            font-size: 0.95rem;
-            color: #374151;
-            margin-bottom: 20px;
-            line-height: 1.6;
-        }
-
-        .img-container {
-            width: 100%;
-            margin-bottom: 20px;
-            border-radius: 12px;
-            overflow: hidden;
-        }
-
-        .img-container img {
-            width: 100%;
-            display: block;
-        }
-
-        .options-container {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        button {
-            width: 100%;
-            padding: 14px 20px;
-            border: 1px solid #E5E7EB;
-            background: #F9FAFB;
-            border-radius: 10px;
-            font-size: 0.95rem;
-            font-weight: 400;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            text-align: left;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            color: #111827;
-        }
-
-        button:hover {
-            border-color: var(--primary-color);
-            background: #EFF6FF;
-        }
-
-        button.primary {
-            background: var(--primary-color);
-            color: var(--white);
-            border: none;
-            justify-content: center;
-            font-weight: 700;
-            text-align: center;
-            font-size: 1rem;
-            text-transform: uppercase;
-            padding: 18px;
-            margin: 10px 0;
-        }
-
-        button.primary:hover {
-            background: #1D4ED8;
-        }
-
-        button.cta-green {
-            width: 100%;
-            background: var(--green);
-            color: var(--white);
-            border: none;
-            justify-content: center;
-            font-weight: 700;
-            text-align: center;
-            font-size: 1rem;
-            text-transform: uppercase;
-            padding: 18px;
-            margin: 15px 0;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            border-radius: 10px;
-            transition: transform 0.2s;
-        }
-
-        button.cta-green:hover {
-            background: #16A34A;
-            transform: scale(1.05);
-        }
-
-        input[type="text"] {
-            width: 100%;
-            padding: 16px;
-            border: 1px solid #D1D5DB;
-            border-radius: 10px;
-            font-size: 1rem;
-            margin-bottom: 15px;
-            outline: none;
-            background: #F9FAFB;
-        }
-
-        .audio-player-container {
-            width: 100%;
-            background: #F8FAFC;
-            padding: 15px;
-            border-radius: 12px;
-            margin-bottom: 20px;
-            border: 1px solid #E2E8F0;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .padre-avatar {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            overflow: hidden;
-            flex-shrink: 0;
-            border: 2px solid var(--primary-color);
-        }
-
-        .padre-avatar img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .audio-player-wrapper {
-            flex-grow: 1;
-        }
-
-        audio {
-            width: 100%;
-            height: 40px;
-        }
-
-        .loading-container {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-            margin: 30px 0;
-        }
-
-        .loader {
-            border: 4px solid #f3f3f3;
-            border-top: 4px solid var(--primary-color);
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            animation: spin 1s linear infinite;
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        .loading-text {
-            font-size: 0.9rem;
-            color: var(--primary-color);
-            font-weight: 600;
-        }
-
-        .testimonial-carousel {
-            width: 100%;
-            position: relative;
-            margin: 20px 0;
-            overflow: hidden;
-        }
-
-        .carousel-inner {
-            display: flex;
-            transition: transform 0.5s ease;
-        }
-
-        .carousel-item {
-            min-width: 100%;
-            padding: 10px;
-        }
-
-        .carousel-item img {
-            width: 100%;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-
-        .carousel-btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(255,255,255,0.8);
-            border: none;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            z-index: 10;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-        }
-
-        .carousel-btn.prev { left: 10px; }
-        .carousel-btn.next { right: 10px; }
-
-        .checkout-page {
-            text-align: center;
-            width: 100%;
-        }
-
-        .section-title {
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: var(--light-blue);
-            margin: 30px 0 15px;
-            text-transform: uppercase;
-        }
-
-        .sub-header-text {
-            font-size: 0.9rem;
-            color: var(--light-blue);
-            font-weight: 600;
-            margin-bottom: 15px;
-        }
-
-        .incluso-text {
-            font-size: 1rem;
-            font-weight: 700;
-            margin: 15px 0;
-            color: #1F2937;
-        }
-
-        /* Estilos de Oferta Unificados */
-        .container-oferta {
-            text-align: center;
-            font-family: 'Arial Black', sans-serif;
-            margin: 20px 0;
-        }
-
-        .price-info-block {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            line-height: 1.1;
-        }
-
-        .old-price-block {
-            color: #FF0000;
-            text-decoration: line-through;
-            font-size: 1.8rem;
-            font-weight: 900;
-            text-transform: uppercase;
-        }
-
-        .promo-text-block {
-            color: #000;
-            font-size: 1.1rem;
-            font-weight: bold;
-            margin: 5px 0;
-        }
-
-        .current-price-block {
-            color: #00B359;
-            font-size: 3.5rem;
-            font-weight: 900;
-            margin-bottom: 5px;
-        }
-
-        .installments-block {
-            color: #333;
-            font-size: 1.1rem;
-            font-weight: bold;
-        }
-
-        .price-line {
-            font-family: Arial, sans-serif;
-            font-size: 18px;
-            text-align: center;
-            margin-top: 10px;
-        }
-
-        .old-price-red {
-            color: #e60000;
-            text-decoration: line-through;
-        }
-
-        .new-price-green {
-            color: #1a472a;
-            font-weight: normal;
-        }
-
-        .bloco-garantia {
-            text-align: center;
-            font-family: Arial, sans-serif;
-            max-width: 600px;
-            margin: 40px auto;
-            padding: 0 20px;
-            color: #1a1a24;
-        }
-
-        .titulo-garantia {
-            font-size: 1.6rem;
-            font-weight: 800;
-            margin-bottom: 15px;
-        }
-
-        .texto-garantia {
-            font-size: 1.1rem;
-            line-height: 1.5;
-            color: #33333b;
-        }
+        :root { --primary-color: #2563EB; --bg-color: #FFFFFF; --text-color: #020617; --white: #FFFFFF; --green: #22C55E; --red: #EF4444; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background-color: var(--bg-color); color: var(--text-color); display: flex; justify-content: center; min-height: 100vh; }
+        #quiz-container { width: 100%; max-width: 500px; background: var(--white); min-height: 100vh; padding: 20px; display: flex; flex-direction: column; }
+        .header-logo { display: flex; justify-content: center; padding: 10px 0; margin-bottom: 10px; }
+        .header-logo img { width: 40px; }
+        .progress-bar-container { width: 100%; height: 8px; background: #F1F5F9; border-radius: 4px; margin-bottom: 30px; overflow: hidden; display: none; }
+        .progress-bar { height: 100%; background: var(--primary-color); width: 0%; transition: width 0.5s ease; }
+        .step { display: none; flex-direction: column; align-items: center; text-align: center; animation: fadeIn 0.3s ease; }
+        .step.active { display: flex; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        h1 { font-size: 1.3rem; margin-bottom: 15px; line-height: 1.4; }
+        p { font-size: 0.95rem; color: #374151; margin-bottom: 20px; }
+        .img-container { width: 100%; margin-bottom: 20px; border-radius: 12px; overflow: hidden; }
+        .img-container img { width: 100%; display: block; }
+        .options-container { width: 100%; display: flex; flex-direction: column; gap: 10px; }
+        button { width: 100%; padding: 14px; border: 1px solid #E5E7EB; background: #F9FAFB; border-radius: 10px; cursor: pointer; text-align: left; display: flex; align-items: center; gap: 12px; }
+        button.primary { background: var(--primary-color); color: white; border: none; justify-content: center; font-weight: 700; text-transform: uppercase; padding: 18px; }
+        input[type="text"] { width: 100%; padding: 16px; border: 1px solid #D1D5DB; border-radius: 10px; margin-bottom: 15px; font-size: 1rem; }
     </style>
 </head>
 <body>
 
 <div id="quiz-container">
-    <div class="header-logo" id="main-logo" style="display:none;">
-        <img src="https://cdn.xquiz.co/images/d3d0db68-30d9-4a8a-a0de-56a4f23cb2bb" alt="Logo">
-    </div>
-
-    <div class="progress-bar-container" id="progress-container" style="display:none;">
-        <div class="progress-bar" id="progress-bar"></div>
-    </div>
+    <div class="header-logo" id="main-logo" style="display:none;"><img src="https://cdn.xquiz.co/images/d3d0db68-30d9-4a8a-a0de-56a4f23cb2bb" alt="Logo"></div>
+    <div class="progress-bar-container" id="progress-container"><div class="progress-bar" id="progress-bar"></div></div>
 
     <div class="step active" id="step-1">
-        <div class="step-1-title">ISSO NÃO É POR ACASO...</div>
-        <div class="step-1-subtitle">Se você chegou até aqui, é porque <strong>ELA TE CHAMOU ❤️ 🙏</strong></div>
-        <div class="step-1-call">Mas agora... VOCÊ VAI TER CORAGEM DE DIZER "SIM"?</div>
-        <div class="img-container">
-            <img src="https://i.imgur.com/3gx7Qjx.png" alt="Maria">
-        </div>
+        <div style="color:#0088CC; font-weight:700; margin-bottom:10px; text-transform: uppercase;">Isso não é por acaso...</div>
+        <h1>Se você chegou até aqui, é porque ELA TE CHAMOU ❤️ 🙏</h1>
+        <div class="img-container"><img src="https://i.imgur.com/3gx7Qjx.png" alt="Maria"></div>
         <button class="primary" onclick="nextStep(2)">INICIAR JORNADA</button>
-        <div class="step-1-footer">
-            📜 Responda algumas perguntas rápidas... E receba um Devocional feito para você. Com oração, direção e fé.
-        </div>
     </div>
 
     <div class="step" id="step-2">
-        <h1>Gostaria de deixar seu nome para que o incluamos em nosso Livro de Orações?</h1>
-        <p>Com grande alegria, levaremos seu nome ao altar em nossas preces diárias. Ao registrá-lo aqui, unimos sua intenção à nossa comunidade de fé, confiando tudo ao Coração Misericordioso de Jesus e à intercessão de Nossa Senhora. 🙏🌹</p>
+        <h1>Qual seu nome para o Livro de Orações?</h1>
+        <p>Levaremos sua intenção ao altar em nossas preces diárias. 🙏🌹</p>
         <input type="text" id="user-name" placeholder="Digite seu nome aqui">
         <button class="primary" onclick="saveName()">Enviar</button>
     </div>
 
     <div class="step" id="step-3">
         <h1 id="welcome-title">Carregando...</h1>
-        <p>🙏 Seu nome já foi cuidadosamente incluído em nosso Livro de Orações. Ele será lembrado com carinho e fé em cada dia, diante do altar do Senhor. ✨</p>
+        <p>Seu nome já foi incluído em nosso Livro de Orações. ✨</p>
         <button class="primary" onclick="nextStep(4)">CONTINUAR</button>
     </div>
 
     <div class="step" id="step-4">
-        <h1>Em quais áreas você deseja colocar seu coração neste Devocional?</h1>
+        <h1>Em qual área você precisa de mais amparo?</h1>
         <div class="options-container">
-            <button onclick="nextStep(5)">💵 Minha vida financeira e profissional</button>
-            <button onclick="nextStep(5)">💓 Harmonia nos relacionamentos familiares</button>
-            <button onclick="nextStep(5)">🛐 Proteção e força espiritual</button>
-            <button onclick="nextStep(5)">🙏 Minha caminhada de fé</button>
-            <button onclick="nextStep(5)">💭 Outra intenção</button>
+            <button onclick="nextStep(5)">💵 Vida financeira</button>
+            <button onclick="nextStep(5)">💓 Família e Relacionamentos</button>
+            <button onclick="nextStep(5)">🛐 Proteção Espiritual</button>
         </div>
     </div>
 
     <div class="step" id="step-5">
-        <h1>Como está o seu coração espiritual neste momento?</h1>
-        <div class="options-container">
-            <button onclick="nextStep(6)">❤️‍
+        <h1>Seu guia está sendo preparado...</h1>
+        <p>Estamos unindo as orações que mais combinam com o seu momento.</p>
+        <button class="primary" onclick="finalRedirect()">VER MEU GUIA AGORA</button>
+    </div>
+</div>
+
+<script>
+    let currentStep = 1;
+    const totalSteps = 5;
+
+    function nextStep(step) {
+        // Esconder passo atual
+        document.getElementById(`step-${currentStep}`).classList.remove('active');
+        
+        // Mostrar novo passo
+        currentStep = step;
+        document.getElementById(`step-${currentStep}`).classList.add('active');
+
+        // Mostrar logo e progresso após o passo 1
+        if (currentStep > 1) {
+            document.getElementById('main-logo').style.display = 'flex';
+            document.getElementById('progress-container').style.display = 'block';
+            updateProgressBar();
+        }
+    }
+
+    function updateProgressBar() {
+        const progress = ((currentStep - 1) / (totalSteps - 1)) * 100;
+        document.getElementById('progress-bar').style.width = `${progress}%`;
+    }
+
+    function saveName() {
+        const name = document.getElementById('user-name').value;
+        if (name.trim() === "") {
+            alert("Por favor, digite seu nome.");
+            return;
+        }
+        document.getElementById('welcome-title').innerText = `Seja bem-vinda, ${name}!`;
+        fbq('track', 'Lead'); // Dispara o Pixel de Lead aqui
+        nextStep(3);
+    }
+
+    function finalRedirect() {
+        // Substitua pelo seu link de checkout da Kiwify/Hotmart com seus parâmetros
+        window.location.href = "https://pay.kiwify.com.br/SEU_LINK_AQUI";
+    }
+</script>
+
+</body>
+</html>
