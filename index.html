@@ -48,13 +48,43 @@
         .header-logo {
             display: flex;
             justify-content: center;
+            align-items: center;
             padding: 10px 0;
             margin-bottom: 10px;
+            position: relative;
+            min-height: 40px;
         }
 
         .header-logo img {
             width: 40px;
             height: auto;
+            display: block;
+        }
+
+        button.back-btn {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: auto;
+            padding: 5px;
+            border: none;
+            background: transparent;
+            color: #111827;
+            margin: 0;
+            border-radius: 0;
+            cursor: pointer;
+        }
+
+        button.back-btn:hover {
+            border-color: transparent;
+            background: transparent;
+        }
+
+        button.back-btn svg {
+            width: 24px;
+            height: 24px;
+            display: block;
         }
 
         .progress-bar-container {
@@ -273,18 +303,29 @@
             margin: 30px 0;
         }
 
-        .loader {
-            border: 4px solid #f3f3f3;
-            border-top: 4px solid var(--primary-color);
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            animation: spin 1s linear infinite;
+        .loader-bar-container {
+            width: 80%;
+            max-width: 300px;
+            height: 10px;
+            background: #E5E7EB;
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
         }
 
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+        .loader-bar {
+            width: 0%;
+            height: 100%;
+            background: linear-gradient(90deg, #00C6FF 0%, #0072FF 100%);
+            border-radius: 5px;
+            animation: loadBar 3s ease-in-out forwards;
+        }
+
+        @keyframes loadBar {
+            0% { width: 0%; }
+            30% { width: 40%; }
+            70% { width: 75%; }
+            100% { width: 100%; }
         }
 
         .loading-text {
@@ -373,9 +414,86 @@
             color: #1F2937;
         }
         
-       
+        .highlight-name {
+            color: #0088CC;
+            background: linear-gradient(90deg, #00C6FF 0%, #0072FF 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+        }
+        
+        .step-9-footer {
+            color: #00A3FF;
+            font-weight: 700;
+            font-size: 1.05rem;
+            margin-top: 30px;
+            text-align: center;
+            line-height: 1.4;
+        }
+
+        /* --- ESTILOS ESPECÍFICOS DO PASSO 8 ADICIONADOS --- */
+        .destaque-azul {
+            color: var(--light-blue);
+            font-weight: 700;
+        }
+        
+        .pergunta-principal {
+            font-size: 1.05rem;
+            margin-bottom: 25px;
+            color: var(--text-color);
+        }
+        
+        .texto-exemplos {
+            font-size: 0.95rem;
+            margin-bottom: 25px;
+            color: #374151;
+            line-height: 1.6;
+        }
+        
+        .texto-chamada {
+            font-size: 1.05rem;
+            color: var(--text-color);
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        
+        .texto-sub {
+            font-size: 0.9rem;
+            color: #4B5563;
+            margin-bottom: 25px;
+        }
+
+        .input-com-icone {
+            position: relative;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        .input-com-icone svg {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            color: #6B7280;
+        }
+
+        .input-com-icone input[type="text"] {
+            padding-left: 45px; 
+            margin-bottom: 0; 
+        }
     </style>
-     <!-- Meta Pixel Code -->
+<script
+  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+  data-utmify-prevent-xcod-sck
+  data-utmify-prevent-subids
+  async
+  defer
+></script>
+
+<!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -385,27 +503,25 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1587595282504005');
+fbq('init', '966103799608931');
 fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1587595282504005&ev=PageView&noscript=1"
+src="https://www.facebook.com/tr?id=966103799608931&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
-        <script
-  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
-  data-utmify-prevent-xcod-sck
-  data-utmify-prevent-subids
-  async
-  defer
-></script>
 </head>
 <body>
 
 <div id="quiz-container">
     <!-- Logo Topo -->
     <div class="header-logo" id="main-logo" style="display:none;">
-        <img src="https://cdn.xquiz.co/images/d3d0db68-30d9-4a8a-a0de-56a4f23cb2bb" alt="Logo">
+        <button class="back-btn" id="back-btn" onclick="goBack()" style="display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            </svg>
+        </button>
+        <img id="logo-img" src="https://cdn.xquiz.co/images/d3d0db68-30d9-4a8a-a0de-56a4f23cb2bb" alt="Logo">
     </div>
 
     <div class="progress-bar-container" id="progress-container" style="display:none;">
@@ -494,9 +610,31 @@ src="https://www.facebook.com/tr?id=1587595282504005&ev=PageView&noscript=1"
 
     <!-- Step 8: Prece -->
     <div class="step" id="step-8">
-        <h1>Deus quer te abençoar hoje! ✨🙏</h1>
-        <p>Declare com fé seu pedido abaixo. Nossa Senhora levará sua súplica até o coração de Jesus.</p>
-        <input type="text" id="user-prece" placeholder="Digite aqui sua prece...">
+        <h1>Deus quer te abençoar hoje! ✨ 🙏</h1>
+        
+        <p class="pergunta-principal">
+            <span id="nome-lead-step8" class="destaque-azul"></span><span id="texto-se-voce">e você pudesse ver </span><strong class="destaque-azul">seu maior desejo realizado</strong>, o que pediria?
+        </p>
+
+        <p class="texto-exemplos">
+            Talvez seja <strong>uma cura</strong>, ou a <strong>restauração da sua família</strong>, a <strong>libertação de um vício</strong>, a <strong>prosperidade financeira</strong>, o reencontro com <strong>o amor verdadeiro</strong> ou, simplesmente, a <strong>paz no coração</strong>...
+        </p>
+
+        <p class="texto-chamada">
+            <strong>Declare com fé seu pedido abaixo. Nossa Senhora, cheia de graça e fonte de bênçãos, levará sua súplica até o coração de Jesus. Ela intercederá poderosamente por você! ❤️ 🌹</strong>
+        </p>
+
+        <p class="texto-sub">
+            Acredite: nada é impossível para Deus. Com este Devocional, Ele agirá com amor e poder em sua vida. 🙌
+        </p>
+
+        <div class="input-com-icone">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+            </svg>
+            <input type="text" id="user-prece" placeholder="Digite aqui sua prece...">
+        </div>
+        
         <button class="primary" onclick="savePrece()">CONTINUAR</button>
     </div>
 
@@ -508,19 +646,22 @@ src="https://www.facebook.com/tr?id=1587595282504005&ev=PageView&noscript=1"
             <button onclick="nextStep(10)">🙌 Sim, acredito que seria útil sim.</button>
             <button onclick="nextStep(10)">🤔 Talvez… depende de como isso se aplicaria.</button>
         </div>
+        <p class="step-9-footer">Você está prestes a viver uma grande transformação<br>espiritual! 🙏❤️</p>
     </div>
 
     <!-- Step 10: Final Loading -->
     <div class="step" id="step-10">
-        <div class="img-container">
+        <div class="img-container" style="max-width: 280px; margin: 0 auto 20px auto;">
             <img src="https://i.imgur.com/zsL15W8.png" alt="Livro">
         </div>
         <h1>Gerando seu Devocional 🙏❤️</h1>
         <div class="loading-container" id="loading-section">
-            <div class="loader"></div>
+            <div class="loader-bar-container">
+                <div class="loader-bar"></div>
+            </div>
             <div class="loading-text">Carregando...</div>
         </div>
-        <p id="final-text" style="display:none; font-size: 1rem; margin-top: 20px;"></p>
+        <p id="final-text" style="display:none; font-size: 1rem; margin-top: 20px; word-wrap: break-word; overflow-wrap: break-word; word-break: break-word;"></p>
         <button class="primary" id="final-cta" style="display:none;" onclick="nextStep(11)">ACESSAR MEU DEVOCIONAL</button>
     </div>
 
@@ -713,6 +854,24 @@ src="https://www.facebook.com/tr?id=1587595282504005&ev=PageView&noscript=1"
     </div>
 </div>
 
+<style>
+    @media (max-width: 414px) {
+        h1 { font-size: 1.4rem !important; line-height: 1.4 !important; }
+        p { font-size: 1.05rem !important; line-height: 1.6 !important; }
+        .options-container button { 
+            font-size: 1.05rem !important; 
+            padding: 18px 20px !important; 
+            margin-bottom: 5px !important;
+        }
+        .current-price { font-size: 2.5rem !important; }
+        .old-price, .old-price-red { font-size: 1.4rem !important; margin-bottom: 5px; display: inline-block; }
+        .new-price-green { font-size: 1rem !important; }
+        .titulo-garantia { font-size: 1.3rem !important; }
+        .pergunta-principal { font-size: 1.1rem !important; }
+        button.primary, button.cta-green { padding: 16px 20px !important; font-size: 1.05rem !important; }
+    }
+</style>
+
 <script>
     let currentStep = 1;
     const totalSteps = 11;
@@ -723,12 +882,30 @@ src="https://www.facebook.com/tr?id=1587595282504005&ev=PageView&noscript=1"
     function updateProgress() {
         const progress = ((currentStep - 1) / (totalSteps - 1)) * 100;
         document.getElementById('progress-bar').style.width = progress + '%';
-        if (currentStep === 1 || currentStep === 11) {
+        if (currentStep === 1) {
             document.getElementById('main-logo').style.display = 'none';
+            document.getElementById('progress-container').style.display = 'none';
+        } else if (currentStep === 11) {
+            document.getElementById('main-logo').style.display = 'flex';
+            document.getElementById('logo-img').style.display = 'none';
+            document.getElementById('back-btn').style.display = 'flex';
             document.getElementById('progress-container').style.display = 'none';
         } else {
             document.getElementById('main-logo').style.display = 'flex';
+            document.getElementById('logo-img').style.display = 'block';
+            document.getElementById('back-btn').style.display = 'flex';
             document.getElementById('progress-container').style.display = 'block';
+        }
+    }
+
+    function goBack() {
+        if (currentStep > 1) {
+            let previous = currentStep - 1;
+            document.querySelector('.step.active').classList.remove('active');
+            document.getElementById('step-' + previous).classList.add('active');
+            currentStep = previous;
+            updateProgress();
+            window.scrollTo(0, 0);
         }
     }
 
@@ -738,6 +915,21 @@ src="https://www.facebook.com/tr?id=1587595282504005&ev=PageView&noscript=1"
         currentStep = step;
         updateProgress();
         window.scrollTo(0, 0);
+
+        // Regra para injetar o nome dinâmico no Passo 8
+        if (step === 8) {
+            let spanNome = document.getElementById('nome-lead-step8');
+            let textoSeVoce = document.getElementById('texto-se-voce');
+            
+            if (userName && userName.trim() !== "") {
+                spanNome.innerHTML = "<span class='highlight-name'>" + userName + "</span>, s";
+                textoSeVoce.innerText = "e você pudesse ver ";
+            } else {
+                spanNome.innerText = "S";
+                textoSeVoce.innerText = "e você pudesse ver ";
+            }
+        }
+
         if (step === 10) startFinalLoading();
     }
 
@@ -745,7 +937,7 @@ src="https://www.facebook.com/tr?id=1587595282504005&ev=PageView&noscript=1"
         const nameInput = document.getElementById('user-name').value;
         if (!nameInput.trim()) return alert("Por favor, digite seu nome.");
         userName = nameInput;
-        document.getElementById('welcome-title').innerText = userName + " é uma bênção contar com sua presença!";
+        document.getElementById('welcome-title').innerHTML = "<span class='highlight-name'>" + userName + "</span> é uma bênção contar com sua presença! 🙏";
         nextStep(3);
     }
 
@@ -761,7 +953,7 @@ src="https://www.facebook.com/tr?id=1587595282504005&ev=PageView&noscript=1"
             document.getElementById('loading-section').style.display = 'none';
             const finalText = document.getElementById('final-text');
             finalText.style.display = 'block';
-            finalText.innerHTML = 'Neste Devocional os caminhos se abrirão e o meu desejo de <strong>' + userPrece + '</strong> será realizado em nome de Jesus pela intercessão de Nossa Senhora.';
+            finalText.innerHTML = 'Neste Devocional os caminhos se abrirão e o meu desejo de <strong style="color: var(--primary-color);">' + userPrece + '</strong> será realizado em nome de Jesus pela intercessão de Nossa Senhora.';
             document.getElementById('final-cta').style.display = 'block';
         }, 3000);
     }
