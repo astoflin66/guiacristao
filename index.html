@@ -600,11 +600,6 @@ src="https://www.facebook.com/tr?id=1999614640683164&ev=PageView&noscript=1"
 <div id="quiz-container">
     <!-- Logo Topo -->
     <div class="header-logo" id="main-logo" style="display:none;">
-        <button class="back-btn" id="back-btn" onclick="goBack()" style="display: none;">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-            </svg>
-        </button>
         <img id="logo-img" src="https://cdn.xquiz.co/images/51b121c2-5aac-478b-bff8-c91f33c8481b" alt="365 Dias com Maria">
     </div>
 
@@ -951,12 +946,10 @@ src="https://www.facebook.com/tr?id=1999614640683164&ev=PageView&noscript=1"
         } else if (currentStep === 11) {
             document.getElementById('main-logo').style.display = 'flex';
             document.getElementById('logo-img').style.display = 'block';
-            document.getElementById('back-btn').style.display = 'flex';
             document.getElementById('progress-container').style.display = 'none';
         } else {
             document.getElementById('main-logo').style.display = 'flex';
             document.getElementById('logo-img').style.display = 'block';
-            document.getElementById('back-btn').style.display = 'flex';
             document.getElementById('progress-container').style.display = 'block';
         }
     }
