@@ -214,24 +214,24 @@
         .step-1-title {
             color: rgb(18, 142, 172);
             font-weight: 700;
-            font-size: 1.25rem;
-            margin-bottom: 12px;
+            font-size: 1.05rem;
+            margin-bottom: 8px;
             text-transform: uppercase;
-            line-height: 1.4;
+            line-height: 1.35;
         }
 
         .step-1-subtitle {
             color: #020617;
-            font-size: 1rem;
-            margin-bottom: 20px;
-            font-weight: 700;
-            line-height: 1.5;
+            font-size: 0.88rem;
+            margin-bottom: 12px;
+            font-weight: 600;
+            line-height: 1.4;
         }
 
         .step-1-time {
-            font-size: 0.9rem;
+            font-size: 0.82rem;
             color: #64748B;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             text-align: center;
         }
 
@@ -611,7 +611,7 @@ src="https://www.facebook.com/tr?id=1999614640683164&ev=PageView&noscript=1"
     <div class="step active" id="step-1">
         <h1 class="step-1-title">SEU DEVOCIONAL COM MARIA SERÁ PREPARADO PARA ESTE MOMENTO DA SUA VIDA 🙏</h1>
         <p class="step-1-subtitle">Com algumas perguntas rápidas, vamos preparar uma jornada simples de oração para você caminhar com Maria todos os dias.</p>
-        <div class="img-container" style="max-width: 320px; margin: 0 auto 15px auto;">
+        <div class="img-container step-1-img" style="max-width: 220px; margin: 0 auto 10px auto;">
             <img src="https://cdn.xquiz.co/images/562c397a-1c5b-4cf1-8be0-40da9e9c1516" alt="365 dias com Maria">
         </div>
         <div class="step-1-time">⏳ Leva menos de 1 minuto</div>
@@ -635,7 +635,7 @@ src="https://www.facebook.com/tr?id=1999614640683164&ev=PageView&noscript=1"
 
     <!-- Step 4: Pergunta 1 -->
     <div class="step" id="step-4">
-        <h1>Em quais áreas você deseja colocar seu coração neste Devocional?</h1>
+        <h1 class="step-4-title">Em quais áreas você deseja colocar seu coração neste Devocional?</h1>
         <div class="options-container">
             <button onclick="nextStep(5)">💵 Minha vida financeira e profissional</button>
             <button onclick="nextStep(5)">💓 Harmonia nos relacionamentos familiares</button>
@@ -647,8 +647,8 @@ src="https://www.facebook.com/tr?id=1999614640683164&ev=PageView&noscript=1"
 
     <!-- Step 5: Pergunta 2 -->
     <div class="step" id="step-5">
-        <h1>Como está o seu coração espiritual neste momento?</h1>
-        <div class="options-container">
+        <h1 class="question-title">Como está o seu coração espiritual neste momento?</h1>
+        <div class="options-container compact-options">
             <button onclick="nextStep(6)">❤️‍🔥 Sinto que preciso de uma purificação interior</button>
             <button onclick="nextStep(6)">🌿 Busco uma renovação espiritual</button>
             <button onclick="nextStep(6)">🕊️ Estou em paz, mas desejo mais clareza e direção</button>
@@ -716,7 +716,7 @@ src="https://www.facebook.com/tr?id=1999614640683164&ev=PageView&noscript=1"
 
     <!-- Step 9: Pergunta 4 -->
     <div class="step" id="step-9">
-        <h1>Se você pudesse viver os ensinamentos de Jesus de forma prática no seu dia a dia com a intercessão de Nossa Senhora, isso seria valioso para você?</h1>
+        <h1 class="step-9-title">Se você pudesse viver os ensinamentos de Jesus de forma prática no seu dia a dia com a intercessão de Nossa Senhora, isso seria valioso para você?</h1>
         <div class="options-container">
             <button onclick="nextStep(10)">🙏 Sim, seria muito valioso para minha vida!</button>
             <button onclick="nextStep(10)">🙌 Sim, acredito que seria útil sim.</button>
@@ -727,18 +727,22 @@ src="https://www.facebook.com/tr?id=1999614640683164&ev=PageView&noscript=1"
 
     <!-- Step 10: Final Loading -->
     <div class="step" id="step-10">
-        <div class="img-container" style="max-width: 280px; margin: 0 auto 20px auto;">
-            <img src="https://i.imgur.com/zsL15W8.png" alt="Livro">
+        <p id="final-text" style="font-size: 1.05rem; font-weight: 700; color: #020617; text-align: center; margin-bottom: 15px; line-height: 1.4; word-wrap: break-word; overflow-wrap: break-word; word-break: break-word;">
+            Neste Devocional os caminhos se abrirão e o meu desejo de <span id="prece-destaque" style="color: #0088cc; font-weight: 700;"></span> será realizado em nome de Jesus pela intercessão de Nossa Senhora.
+        </p>
+
+        <div class="img-container step-10-img" style="max-width: 200px; margin: 0 auto 15px auto;">
+            <img src="1m.png" alt="365 Dias com Maria">
         </div>
-        <h1>Gerando seu Devocional 🙏❤️</h1>
-        <div class="loading-container" id="loading-section">
+
+        <div class="loading-container" id="loading-section" style="width: 100%; margin-bottom: 15px;">
             <div class="loader-bar-container">
                 <div class="loader-bar"></div>
             </div>
-            <div class="loading-text">Carregando...</div>
+            <h2 style="font-size: 1.05rem; font-weight: 700; color: #020617; text-align: center; margin-top: 10px;">Gerando seu Devocional 🙏❤️</h2>
         </div>
-        <p id="final-text" style="display:none; font-size: 1rem; margin-top: 20px; word-wrap: break-word; overflow-wrap: break-word; word-break: break-word;"></p>
-        <button class="primary" id="final-cta" style="display:none;" onclick="nextStep(11)">ACESSAR MEU DEVOCIONAL</button>
+
+        <button class="primary" id="final-cta" style="display:none;" onclick="nextStep(11)">CONTINUAR</button>
     </div>
 
     <!-- Step 11: Checkout Final -->
@@ -913,20 +917,59 @@ src="https://www.facebook.com/tr?id=1999614640683164&ev=PageView&noscript=1"
 </div>
 
 <style>
-    @media (max-width: 414px) {
-        h1 { font-size: 1.4rem !important; line-height: 1.4 !important; }
-        p { font-size: 1.05rem !important; line-height: 1.6 !important; }
+    .question-title, .step-4-title, .step-9-title {
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin-bottom: 12px;
+        line-height: 1.35;
+    }
+
+    @media (max-width: 480px) {
+        .step-1-title { font-size: 0.98rem !important; margin-bottom: 6px !important; line-height: 1.3 !important; }
+        .step-1-subtitle { font-size: 0.82rem !important; margin-bottom: 10px !important; line-height: 1.35 !important; }
+        .step-1-img { max-width: 190px !important; margin-bottom: 8px !important; }
+        .step-1-time { font-size: 0.8rem !important; margin-bottom: 8px !important; }
+
+        .question-title, .step-4-title, .step-9-title { font-size: 0.94rem !important; margin-bottom: 10px !important; line-height: 1.3 !important; }
+        .step-9-footer { font-size: 0.8rem !important; margin-top: 8px !important; }
+        .options-container { gap: 6px !important; }
         .options-container button { 
-            font-size: 1.05rem !important; 
-            padding: 18px 20px !important; 
-            margin-bottom: 5px !important;
+            font-size: 0.88rem !important; 
+            padding: 11px 14px !important; 
+            margin-bottom: 0 !important;
         }
-        .current-price { font-size: 2.5rem !important; }
-        .old-price, .old-price-red { font-size: 1.4rem !important; margin-bottom: 5px; display: inline-block; }
-        .new-price-green { font-size: 1rem !important; }
-        .titulo-garantia { font-size: 1.3rem !important; }
-        .pergunta-principal { font-size: 1.1rem !important; }
-        button.primary, button.cta-green { padding: 16px 20px !important; font-size: 1.05rem !important; }
+        .compact-options { gap: 5px !important; }
+        .compact-options button {
+            font-size: 0.84rem !important;
+            padding: 9px 12px !important;
+            line-height: 1.3 !important;
+        }
+        .step-10-img { max-width: 175px !important; margin-bottom: 10px !important; }
+        #final-text { font-size: 0.95rem !important; margin-bottom: 10px !important; line-height: 1.35 !important; }
+    }
+    @media (max-width: 414px) {
+        h1 { font-size: 1.12rem !important; line-height: 1.35 !important; margin-bottom: 10px !important; }
+        p { font-size: 0.9rem !important; line-height: 1.45 !important; }
+        .step-9-title { font-size: 0.9rem !important; margin-bottom: 8px !important; line-height: 1.28 !important; }
+        .step-9-footer { font-size: 0.78rem !important; margin-top: 6px !important; }
+        .step-10-img { max-width: 160px !important; margin-bottom: 8px !important; }
+        #final-text { font-size: 0.88rem !important; margin-bottom: 8px !important; line-height: 1.3 !important; }
+        .options-container button { 
+            font-size: 0.86rem !important; 
+            padding: 10px 12px !important; 
+            margin-bottom: 0 !important;
+        }
+        .compact-options button {
+            font-size: 0.82rem !important;
+            padding: 8px 10px !important;
+            line-height: 1.25 !important;
+        }
+        .current-price { font-size: 2.2rem !important; }
+        .old-price, .old-price-red { font-size: 1.2rem !important; margin-bottom: 4px; display: inline-block; }
+        .new-price-green { font-size: 0.95rem !important; }
+        .titulo-garantia { font-size: 1.15rem !important; }
+        .pergunta-principal { font-size: 1.05rem !important; }
+        button.primary, button.cta-green { padding: 15px 18px !important; font-size: 1rem !important; }
     }
 </style>
 
@@ -1005,11 +1048,12 @@ src="https://www.facebook.com/tr?id=1999614640683164&ev=PageView&noscript=1"
     }
 
     function startFinalLoading() {
+        const spanPrece = document.getElementById('prece-destaque');
+        if (spanPrece) {
+            spanPrece.innerText = (userPrece && userPrece.trim() !== "") ? userPrece : "sua intenção";
+        }
         setTimeout(() => {
             document.getElementById('loading-section').style.display = 'none';
-            const finalText = document.getElementById('final-text');
-            finalText.style.display = 'block';
-            finalText.innerHTML = 'Neste Devocional os caminhos se abrirão e o meu desejo de <strong style="color: var(--primary-color);">' + userPrece + '</strong> será realizado em nome de Jesus pela intercessão de Nossa Senhora.';
             document.getElementById('final-cta').style.display = 'block';
         }, 3000);
     }
